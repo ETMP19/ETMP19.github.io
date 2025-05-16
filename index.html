@@ -7,43 +7,33 @@
     <style>
         /* CSS Styles */
         body {
-            font-family: 'Padauk', 'Myanmar3', sans-serif;
+            font-family: 'Pyidaungsu', 'Noto Sans Myanmar', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            border-radius: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            background-color: #f9f9f9;
         }
         
         header {
             text-align: center;
-            padding: 30px 0;
-            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
-            color: white;
-            border-radius: 10px 10px 0 0;
             margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
         h1 {
-            margin: 0;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 2.2em;
+            margin-bottom: 10px;
         }
         
         h2 {
-            color: #000DFF;
-            border-bottom: 2px solid #6B73FF;
+            color: #2575fc;
+            border-bottom: 2px solid #eee;
             padding-bottom: 5px;
             margin-top: 25px;
         }
@@ -54,113 +44,120 @@
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            margin-top: 20px;
+            margin: 15px auto;
+            display: block;
         }
         
-        .section {
-            margin-bottom: 25px;
-            padding: 0 20px;
-        }
-        
-        .interests {
+        .interests-container {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-top: 15px;
+            margin: 20px 0;
         }
         
-        .interest-item {
-            background-color: #f0f4ff;
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-weight: bold;
-            color: #3a4ab3;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        .interest-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1 1 200px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .interest-card h3 {
+            color: #6a11cb;
+            margin-top: 0;
         }
         
         footer {
             text-align: center;
+            margin-top: 40px;
             padding: 20px;
             background-color: #f0f0f0;
-            border-radius: 0 0 10px 10px;
-            margin-top: 30px;
+            border-radius: 10px;
             font-size: 0.9em;
-            color: #666;
-        }
-        
-        .quote {
-            font-style: italic;
-            color: #555;
-            text-align: center;
-            margin: 20px 0;
-            padding: 15px;
-            background-color: #f5f5f5;
-            border-left: 4px solid #6B73FF;
         }
         
         @media (max-width: 600px) {
-            .container {
-                margin: 10px;
+            body {
                 padding: 10px;
             }
             
             h1 {
                 font-size: 1.8em;
             }
+            
+            .interest-card {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>နော်အက်တမွီဖော</h1>
-            <p>အထက်တန်း(Grade-12) ကျောင်းသူ | တောင်ကလေးဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
-            <!-- သင့်ရဲ့ဓာတ်ပုံကို ဒီနေရာမှာ ထည့်နိုင်ပါတယ် -->
-            <!-- <img src="your-photo.jpg" alt="နော်အက်တမွီဖော" class="img.1234.jpg"> -->
-        </header>
-        
-        <div class="section">
-            <h2>ကျွန်မအကြောင်း</h2>
-            <p>မင်္ဂလာပါ! ကျွန်မနာမည်က နော်အက်တမွီဖော ဖြစ်ပါတယ်။ တောင်ကလေးဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းက အထက်တန်း(Grade-12) ကျောင်းသူတစ်ယောက်ဖြစ်ပါတယ်။</p>
+    <header>
+        <img src="https://via.placeholder.com/150" alt="နော်အက်တမွီဖော၏ဓာတ်ပုံ" class="profile-img">
+        <h1>နော်အက်တမွီဖော</h1>
+        <p>အထက်တန်း(Grade-12) ကျောင်းသူ | တောင်ကလေးဘုန်းတော်ကြီးသင်ပညာရေးကျောင်း</p>
+    </header>
+    
+    <section>
+        <h2>ကျွန်မအကြောင်း</h2>
+        <p>မင်္ဂလာပါ။ ကျွန်မနာမည်က နော်အက်တမွီဖော ဖြစ်ပါသည်။ တောင်ကလေးဘုန်းတော်ကြီးသင်ပညာရေးကျောင်းမှ အထက်တန်း(Grade-12) ကျောင်းသူတစ်ယောက်ဖြစ်ပါသည်။ ကျွန်မရဲ့ အနာဂတ်အိပ်မက်နဲ့ လက်ရှိလေ့လာနေတဲ့ အရာတွေကို ဒီစာမျက်နှာမှာ မျှဝေချင်ပါတယ်။</p>
+    </section>
+    
+    <section>
+        <h2>ကျွန်မရဲ့ ဝါသနာများ</h2>
+        <div class="interests-container">
+            <div class="interest-card">
+                <h3>ဆေးပညာ</h3>
+                <p>လူသားတွေရဲ့ ကျန်းမာရေးနဲ့ ခန္ဓာကိုယ်ဖွဲ့စည်းပုံကို လေ့လာရတာ အရမ်းစိတ်ဝင်စားပါတယ်။</p>
+            </div>
             
-            <div class="quote">
-                "ပညာရှာမီ မရောက်စရာ မရှိ"<br>
-                "စာကြည့်တိုက်ဆိုတာ လူသားတွေရဲ့စိတ်ဝိညာဉ်အာဟာရချက်ပြုတ်ရာနေရာ"
+            <div class="interest-card">
+                <h3>စိုက်ပျိုးရေး</h3>
+                <p>သဘာဝနဲ့ သဟဇာတဖြစ်တဲ့ စိုက်ပျိုးနည်းစနစ်တွေကို လေ့လာရတာ ကြိုက်နှစ်သက်ပါတယ်။</p>
+            </div>
+            
+            <div class="interest-card">
+                <h3>စာဖတ်ခြင်း</h3>
+                <p>အထူးသဖြင့် သိပ္ပံနဲ့နည်းပညာဆိုင်ရာ စာအုပ်တွေကို ဖတ်ရတာ ဝါသနာပါပါတယ်။</p>
+            </div>
+            
+            <div class="interest-card">
+                <h3>ဘာသာစကား</h3>
+                <p>မတူညီတဲ့ ယဉ်ကျေးမှုတွေကို ဘာသာစကားကတစ်ဆင့် လေ့လာရတာ သဘောကျပါတယ်။</p>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>ဝါသနာများ</h2>
-            <div class="interests">
-                <span class="interest-item">ဆေးပညာ</span>
-                <span class="interest-item">စိုက်ပျိုးရေး</span>
-                <span class="interest-item">စာဖတ်ခြင်း</span>
-                <span class="interest-item">စာရေးခြင်း</span>
-                <span class="interest-item">ဘာသာစကားလေ့လာခြင်း</span>
-                <span class="interest-item">ကွန်ပျူတာနည်းပညာ</span>
-                <span class="interest-item">Hydroponic</span>
+    </section>
+    
+    <section>
+        <h2>လက်ရှိလေ့လာနေသော အရာများ</h2>
+        <div class="interests-container">
+            <div class="interest-card">
+                <h3>ကွန်ပျူတာနည်းပညာ</h3>
+                <p>HTML, CSS နဲ့ အခြား web development နည်းပညာတွေကို လေ့လာနေပါတယ်။</p>
+            </div>
+            
+            <div class="interest-card">
+                <h3>Hydroponic</h3>
+                <p>မြေမလိုတဲ့ ခေတ်မီစိုက်ပျိုးနည်းစနစ်တစ်ခုဖြစ်တဲ့ Hydroponic နည်းပညာကို လေ့လာနေပါတယ်။</p>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>လက်ရှိလေ့လာနေသော အရာများ</h2>
-            <ul>
-                <li>HTML & CSS - ဝဘ်ဒီဇိုင်းနည်းပညာများ</li>
-                <li>Hydroponic - ရေနည်းပညာဖြင့် အပင်စိုက်ပျိုးခြင်း</li>
-                <li>အထက်တန်းပညာရေး (Grade-12) ဘာသာရပ်များ</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>အနာဂတ်ရည်မှန်းချက်များ</h2>
-            <p>ကျွန်မရဲ့အနာဂတ်မှာ ဆေးပညာနဲ့နည်းပညာကိုပေါင်းစပ်ပြီး လူသားအတွက်အကျိုးပြုနိုင်မယ့် အလုပ်တစ်ခုကို လုပ်ချင်ပါတယ်။ စိုက်ပျိုးရေးနည်းပညာတွေကိုလည်း ဆက်လက်လေ့လာပြီး ကျေးလက်ဒေသဖွံ့ဖြိုးရေးအတွက် အထောက်အကူပြုနိုင်မယ့် နည်းလမ်းတွေကို ရှာဖွေချင်ပါတယ်။</p>
-        </div>
-        
-        <footer>
-            <p>ကျေးဇူးတင်ပါတယ်! ကျွန်မအကြောင်းကို ဖတ်ရှုပေးတဲ့အတွက် ကျေးဇူးအထူးတင်ပါတယ်။</p>
-            <p>© 2023 နော်အက်တမွီဖော</p>
-        </footer>
-    </div>
+    </section>
+    
+    <section>
+        <h2>အနာဂတ်ရည်မှန်းချက်</h2>
+        <p>ကျွန်မရဲ့ အနာဂတ်မှာ ဆေးပညာနဲ့ နည်းပညာကို ပေါင်းစပ်ပြီး လူသားတွေအတွက် အကျိုးပြုနိုင်မယ့် အလုပ်တစ်ခုကို လုပ်ချင်ပါတယ်။ အထူးသဖြင့် ဆေးပညာနဲ့စိုက်ပျိုးရေးမှာ နည်းပညာကို အသုံးချတဲ့ အလုပ်တွေကို စိတ်ဝင်စားပါတယ်။</p>
+    </section>
+    
+    <footer>
+        <p>ကျေးဇူးတင်ပါတယ်။ ကျွန်မအကြောင်း ဖတ်ရှုပေးတဲ့အတွက် ကျေးဇူးတင်ပါတယ်။</p>
+        <p>© 2023 နော်အက်တမွီဖော</p>
+    </footer>
 </body>
 </html>
